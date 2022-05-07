@@ -11,6 +11,9 @@ Add news
 {% block content %}
 <h1 xmlns="http://www.w3.org/1999/html"> ADD NEWS </h1>
 
+
+
+
 <form action="{% url 'add_news' %}" method="post">
     {% csrf_token %}
     {%comment%}
