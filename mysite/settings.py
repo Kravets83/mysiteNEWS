@@ -79,15 +79,27 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         # 'ENGINE': 'django.db.backends.mysql',
+#         # 'NAME': 'django',
+#         # 'USER': 'root',
+#         # 'PASSWORD': '',
+#         # 'HOST': 'localhost',
+#     }
+# }
+DATABASE = "simpledbmamager"
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'django',
-        # 'USER': 'root',
-        # 'PASSWORD': '',
-        # 'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
     }
 }
 
@@ -143,7 +155,7 @@ INTERNAL_IPS = ['127.0.0.1']
 EMAIL_HOST = 'smtp.ukr.net'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'krava198383@ukr.net'
-# EMAIL_HOST_PASSWORD = 'VCs75A4RUTc0FUvY'
+EMAIL_HOST_PASSWORD = 'VCs75A4RUTc0FUvY'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 CKEDITOR_UPLOAD_PATH = "uploads/"
